@@ -25,7 +25,7 @@ namespace Task2 {
 			Console.WriteLine ("{1}{0}{2} {4}\t{3}\n\n",cds[4].Diskname.PadRight(28,' '),cds[4].Bandname.PadRight(20,' '),cds[4].GetPrice(currency),cds[4].ASIN,currency);
 		
 
-			currency = Currency.CHF;
+			currency = Currency.USD;
 			foreach (var disk in cds)
 				Console.WriteLine ("{1}{0}{2} {4}\t{3}",disk.Diskname.PadRight(28,' '),disk.Bandname.PadRight(20,' '),disk.GetPrice(currency),disk.ASIN,currency);
 			
