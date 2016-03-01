@@ -20,7 +20,7 @@ namespace Task3
 		public Vinyl(string bandname, string diskname, decimal price, Currency curr, int speed ,int size)
 		{
 			if (string.IsNullOrWhiteSpace (bandname))
-				throw new ArgumentException ("You've to add a bandname to CDs.");
+				throw new ArgumentException ("You've to add a bandname to Vinyls.");
 			if (string.IsNullOrWhiteSpace (diskname))
 				throw new ArgumentException ("You've to add the title of the disk.");
 		/*	if (speed!=33 || speed !=45)
@@ -91,7 +91,7 @@ namespace Task3
 
 		}
 
-		public string Description => "CD "+Bandname+Diskname;
+		public string Description => "Vinyl "+Bandname+Diskname;
 
 	}
 }
