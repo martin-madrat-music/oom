@@ -39,7 +39,6 @@
     <Compile Include="Currency.cs" />
     <Compile Include="MusicDisks.cs" />
     <Compile Include="Vinyl.cs" />
-    <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
