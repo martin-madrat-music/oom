@@ -2,11 +2,11 @@
 
 namespace Task3
 {
-	public class Currency
+	public enum Currency
 	{
-		public Currency ()
-		{
-		}
+		EUR,
+		USD,
+		CHF,
+		GBP
 	}
 }
-
