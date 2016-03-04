@@ -47,7 +47,7 @@ namespace Tests
         public void CanRedeemGiftCard()
         {
             var x = new GiftCard(100, Currency.EUR);
-            Assert.IsTrue(x.IsRedeemed == false);
+			Assert.IsTrue(x.IsRedeemed == false);
             x.Redeem();
             Assert.IsTrue(x.IsRedeemed == true);
         }
@@ -59,7 +59,7 @@ namespace Tests
             Assert.IsTrue(x.IsRedeemed == false);
             x.Redeem();
             Assert.IsTrue(x.IsRedeemed == true);
-
+	
             try
             {
                 x.Redeem();
@@ -69,6 +69,8 @@ namespace Tests
             {
             }
         }
+
+	
     }
 }
 

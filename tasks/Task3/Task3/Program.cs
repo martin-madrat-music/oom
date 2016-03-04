@@ -25,7 +25,7 @@ namespace Task3 {
 		
 			Console.WriteLine ("\n\n");
 				
-
+			
 
 		}
 	}

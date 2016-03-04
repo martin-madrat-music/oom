@@ -1,0 +1,105 @@
+[
+  {
+    "$type": "Task4.CompactDisk, Task4",
+    "Bandname": "Slayer ",
+    "Diskname": "Repentless",
+    "ASIN": "B00ZU6IVXW",
+    "Description": "CD Slayer Repentless",
+    "Price": {
+      "Amount": 21.99,
+      "Unit": 0
+    }
+  },
+  {
+    "$type": "Task4.CompactDisk, Task4",
+    "Bandname": "Night Falls Last ",
+    "Diskname": "Deathwalker",
+    "ASIN": "B00NDJF398",
+    "Description": "CD Night Falls Last Deathwalker",
+    "Price": {
+      "Amount": 8.99,
+      "Unit": 0
+    }
+  },
+  {
+    "$type": "Task4.CompactDisk, Task4",
+    "Bandname": "Obscura ",
+    "Diskname": "Acróasis",
+    "ASIN": "B018A1MUEO",
+    "Description": "CD Obscura Acróasis",
+    "Price": {
+      "Amount": 14.99,
+      "Unit": 0
+    }
+  },
+  {
+    "$type": "Task4.CompactDisk, Task4",
+    "Bandname": "Comeback Kid ",
+    "Diskname": "Die Knowing",
+    "ASIN": "B00HQ5XK04",
+    "Description": "CD Comeback Kid Die Knowing",
+    "Price": {
+      "Amount": 20.99,
+      "Unit": 0
+    }
+  },
+  {
+    "$type": "Task4.CompactDisk, Task4",
+    "Bandname": "Architects ",
+    "Diskname": "Lost Forever/Lost Together",
+    "ASIN": "B00HUGK7N2",
+    "Description": "CD Architects Lost Forever/Lost Together",
+    "Price": {
+      "Amount": 12.99,
+      "Unit": 0
+    }
+  },
+  {
+    "$type": "Task4.Vinyl, Task4",
+    "actualprice": {
+      "Amount": 20.99,
+      "Unit": 0
+    },
+    "Bandname": "The Doors ",
+    "Diskname": "Doors",
+    "Speed": 33,
+    "Size": 25,
+    "Description": "Vinyl The Doors Doors",
+    "Price": {
+      "Amount": 20.99,
+      "Unit": 0
+    }
+  },
+  {
+    "$type": "Task4.Vinyl, Task4",
+    "actualprice": {
+      "Amount": 21.99,
+      "Unit": 0
+    },
+    "Bandname": "David Bowie ",
+    "Diskname": "Blackstar",
+    "Speed": 45,
+    "Size": 30,
+    "Description": "Vinyl David Bowie Blackstar",
+    "Price": {
+      "Amount": 21.99,
+      "Unit": 0
+    }
+  },
+  {
+    "$type": "Task4.Vinyl, Task4",
+    "actualprice": {
+      "Amount": 4.55,
+      "Unit": 0
+    },
+    "Bandname": "Georg Danzer ",
+    "Diskname": "Traurig aber wahr",
+    "Speed": 33,
+    "Size": 30,
+    "Description": "Vinyl Georg Danzer Traurig aber wahr",
+    "Price": {
+      "Amount": 4.55,
+      "Unit": 0
+    }
+  }
+]

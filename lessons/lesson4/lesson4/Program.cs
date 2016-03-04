@@ -28,6 +28,7 @@ namespace lesson4
                 new GiftCard(100, Currency.EUR),
             };
 
+
             var currency = Currency.EUR;
             foreach (var x in items)
             {
@@ -40,22 +41,27 @@ namespace lesson4
         private static void SerializationExample(IEnumerable<IItem> items)
         {
             // 1.
+			Console.WriteLine("\n\n S T A N D A R D\n\n");
             Console.WriteLine(JsonConvert.SerializeObject(items));
 
             // 2.
+			Console.WriteLine("\n\n F O R M A T 1 \n\n");
             Console.WriteLine(JsonConvert.SerializeObject(items, Formatting.Indented));
 
             // 3.
+			Console.WriteLine("\n\n F O R M A T 2 \n\n");
             var settings = new JsonSerializerSettings() { Formatting = Formatting.Indented, TypeNameHandling = TypeNameHandling.Auto };
             Console.WriteLine(JsonConvert.SerializeObject(items, settings));
 
             // 4.
+			Console.WriteLine("\n\n E I N L E S E N   I N   F I L E \n\n");
             var text = JsonConvert.SerializeObject(items, settings);
             var desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             var filename = Path.Combine(desktop, "items.json");
             File.WriteAllText(filename, text);
 
             // 5.
+			Console.WriteLine("\n\n F O R M A T 4 \n\n");
             var textFromFile = File.ReadAllText(filename);
             var itemsFromFile = JsonConvert.DeserializeObject<IItem[]>(textFromFile, settings);
             var currency = Currency.EUR;
