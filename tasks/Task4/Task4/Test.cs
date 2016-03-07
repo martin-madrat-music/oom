@@ -41,38 +41,25 @@ namespace Task4
 
 		[Test]
 		public void CannotAddEmptyBandname(){
-
-			try{
-				var x = new Vinyl("","herbert",33,25,23.90m,Currency.EUR);
-				x=x;
-			}
-			catch{
-				Assert.Fail ();
-			}
+			Assert.Catch (() => {
+				var x = new Vinyl ("", "herbert", 33, 25, 23.90m, Currency.EUR);
+					
+			});
 		}	
 
 		[Test]
 		public void CannotAddEmptyDiskname(){
-
-			try{
-				var x = new Vinyl("bertram","",33,25,23.90m,Currency.EUR);
-				x=x;
-			}
-			catch{
-				Assert.Fail ();
-			}
+			Assert.Catch (() => {
+				var x = new Vinyl ("bertram", "", 33, 25, 23.90m, Currency.EUR);
+			});
 		}
 
 		[Test]
 		public void CannotAddNegativePrice(){
+			Assert.Catch (() => {
+				var x = new Vinyl ("bertram", "herbert", 33, 25, -23.90m, Currency.EUR);
 
-			try{
-				var x = new Vinyl("bertram","herbert",33,25,-23.90m,Currency.EUR);
-				x=x;
-			}
-			catch{
-				Assert.Fail ();
-			}
+			});
 		}
 
 	}
