@@ -9,17 +9,15 @@ namespace Task4 {
 	class Program {
 		public static void Main(string[] args){
 			var disks = new IMusicDisks[] {
-				new CompactDisk("Slayer ","Repentless",21.99m,Currency.EUR,"B00ZU6IVXW"),
-				new CompactDisk("Night Falls Last ","Deathwalker",8.99m,Currency.EUR,"B00NDJF398"),
-				new CompactDisk("Obscura ","Acróasis",14.99m,Currency.EUR,"B018A1MUEO"),
-				new CompactDisk("Comeback Kid ","Die Knowing",20.99m,Currency.EUR,"B00HQ5XK04"),
-				new CompactDisk("Architects ","Lost Forever/Lost Together",12.99m,Currency.EUR,"B00HUGK7N2"),
-				new Vinyl("The Doors ","Doors",20.99m,Currency.EUR,33,25),
-				new Vinyl("David Bowie ","Blackstar",21.99m,Currency.EUR,45,30),
-				new Vinyl("Georg Danzer ","Traurig aber wahr",4.55m,Currency.EUR,33,30)
+				new CompactDisk("Slayer ","Repentless","B00ZU6IVXW",21.99m,Currency.EUR),
+				new CompactDisk("Night Falls Last ","Deathwalker","B00NDJF398",8.99m,Currency.EUR),
+				new CompactDisk("Obscura ","Acróasis","B018A1MUEO",14.99m,Currency.EUR),
+				new CompactDisk("Comeback Kid ","Die Knowing","B00HQ5XK04",20.99m,Currency.EUR),
+				new CompactDisk("Architects ","Lost Forever/Lost Together","B00HUGK7N2",12.99m,Currency.EUR),
+				new Vinyl("The Doors ","Doors",33,25,20.99m,Currency.EUR),
+				new Vinyl("David Bowie ","Blackstar",45,30,21.99m,Currency.EUR),
+				new Vinyl("Georg Danzer ","Traurig aber wahr",33,30,4.55m,Currency.EUR)
 			};
-
-
 
 			Console.WriteLine ("\n\n");
 
@@ -27,21 +25,25 @@ namespace Task4 {
 		}
 		private static void SerializeDisks (IEnumerable<IMusicDisks> disks){
 
-			var settings = new JsonSerializerSettings() { Formatting = Formatting.Indented, TypeNameHandling = TypeNameHandling.Auto };
-			Console.WriteLine(JsonConvert.SerializeObject(disks));
-					
-			var text = JsonConvert.SerializeObject(disks, settings);
-			var desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-			var filename = Path.Combine(desktop, "all_music.json");
-			File.WriteAllText(filename, text);
+			var settings = new JsonSerializerSettings () {
+				Formatting = Formatting.Indented,
+				TypeNameHandling = TypeNameHandling.Auto
+			};
+			Console.WriteLine(JsonConvert.SerializeObject(disks, settings));
 
-			/*print the file in a correct way*/
-			var textFromFile = File.ReadAllText(filename);
-			var itemsFromFile = JsonConvert.DeserializeObject<IMusicDisks[]>(textFromFile, settings);
+			var json = JsonConvert.SerializeObject(disks, settings);
+			var directory = Environment.GetFolderPath (Environment.SpecialFolder.Desktop);
+			var filename = Path.Combine(directory,"output.json");
+			File.WriteAllText (filename, json);
 
-			foreach (var x in itemsFromFile)
-				Console.WriteLine ("{0} {1} {2}", x.Description.PadRight(40,' '), x.Price.Amount, x.Price.Unit);
-				
+			var txtFromFile = File.ReadAllText (filename);
+			var disksFromFile = JsonConvert.DeserializeObject<IMusicDisks[]> (txtFromFile, settings);
+			var currency = Currency.USD;
+			foreach (var x in disksFromFile)
+				Console.WriteLine ("{0} {1}{2}",x.Description.PadRight(40), x.Price.convert(currency).Amount,currency);
+
+
+
 		}
 	
 	}

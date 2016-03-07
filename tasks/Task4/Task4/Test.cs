@@ -26,17 +26,53 @@ namespace Task4
 
 		[Test]
 		public void CanUpdatePrice(){
-			var x = new Vinyl("bertram","herbert",23.90m,Currency.EUR,33,25);
+			var x = new Vinyl("bertram","herbert",33,25,23.90m,Currency.EUR);
 			x.UpdatePrice (234m, Currency.EUR);
 			Assert.IsTrue(x.actualprice.Amount!=23.90m);
 		}	
 
 		[Test]
-		public void UpdateCurrency(){
-			var x = new Vinyl("bertram","herbert",23.90m,Currency.EUR,33,25);
+		public void CanUpdateCurrency(){
+			var x = new Vinyl("bertram","herbert",33,25,23.90m,Currency.EUR);
 			x.UpdatePrice (234m, Currency.USD);
 			Assert.IsTrue(x.actualprice.Unit!=Currency.EUR);
 			Assert.IsTrue(x.actualprice.Unit==Currency.USD);
+		}
+
+		[Test]
+		public void CannotAddEmptyBandname(){
+
+			try{
+				var x = new Vinyl("","herbert",33,25,23.90m,Currency.EUR);
+				x=x;
+			}
+			catch{
+				Assert.Fail ();
+			}
+		}	
+
+		[Test]
+		public void CannotAddEmptyDiskname(){
+
+			try{
+				var x = new Vinyl("bertram","",33,25,23.90m,Currency.EUR);
+				x=x;
+			}
+			catch{
+				Assert.Fail ();
+			}
+		}
+
+		[Test]
+		public void CannotAddNegativePrice(){
+
+			try{
+				var x = new Vinyl("bertram","herbert",33,25,-23.90m,Currency.EUR);
+				x=x;
+			}
+			catch{
+				Assert.Fail ();
+			}
 		}
 
 	}

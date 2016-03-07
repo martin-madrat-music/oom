@@ -8,7 +8,12 @@ namespace Task4
 {
 	public class Vinyl : IMusicDisks
 	{
+		[JsonIgnore]
 		public myPrice actualprice;
+
+		public Vinyl (string bandname, string diskname, int speed, int size, decimal price,Currency curr)
+			: this(bandname,diskname,speed,size,new myPrice(price,curr)){}
+		
 
 		/// <summary>
 		/// Creates a new <see cref="Vinyl"/>.
@@ -18,7 +23,8 @@ namespace Task4
 		/// <param name="price">Price.</param>
 		/// <param name="currency">Currency.</
 		/// <param name="ASIN">Amazon ID Nbr.</param>
-		public Vinyl(string bandname, string diskname, decimal price, Currency curr, int speed ,int size)
+		[JsonConstructor]
+		public Vinyl(string bandname, string diskname, int speed ,int size, myPrice price)
 		{
 			if (string.IsNullOrWhiteSpace (bandname))
 				throw new ArgumentException ("You've to add a bandname to Vinyls.");
@@ -34,7 +40,7 @@ namespace Task4
 			Speed = speed;
 			Size = size;
 
-			UpdatePrice (price,curr);
+			UpdatePrice (price.Amount,price.Unit);
 		}
 		/// <summary>
 		/// Gets the bandname.
@@ -75,6 +81,7 @@ namespace Task4
 
 		public string Description => "Vinyl "+Bandname+Diskname;
 
+		//[JsonIgnore]
 		public myPrice Price => actualprice;
 
 	}

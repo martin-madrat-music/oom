@@ -12,6 +12,18 @@ namespace Task4
 		private myPrice actualprice;
 
 		/// <summary>
+		/// Initializes a new instance of the <see cref="Task4.CompactDisk"/> class.
+		/// </summary>
+		/// <param name="bandname">Bandname.</param>
+		/// <param name="diskname">Diskname.</param>
+		/// <param name="asin">Asin.</param>
+		/// <param name="price">Price.</param>
+		/// <param name="curr">Curr.</param>
+		public CompactDisk (string bandname, string diskname, string asin, decimal price, Currency curr)
+			: this (bandname,diskname,asin,new myPrice(price,curr)){}
+
+
+		/// <summary>
 		/// Creates a new <see cref="CompactDisk"/>.
 		/// </summary>
 		/// <param name="bandname">Bandname.</param>
@@ -19,7 +31,8 @@ namespace Task4
 		/// <param name="price">Price.</param>
 		/// <param name="currency">Currency.</
 		/// <param name="ASIN">Amazon ID Nbr.</param>
-		public CompactDisk(string bandname, string diskname, decimal price, Currency curr, string asin )
+		[JsonConstructor]
+		public CompactDisk(string bandname, string diskname, string asin, myPrice price)
 		{
 			if (string.IsNullOrWhiteSpace (bandname))
 				throw new ArgumentException ("You've to add a bandname to CDs.");
@@ -32,7 +45,7 @@ namespace Task4
 			Diskname = diskname;
 			ASIN = asin;
 
-			UpdatePrice (price,curr);
+			UpdatePrice (price.Amount,price.Unit);
 		}
 		public string Bandname { get;}
 		public string Diskname { get;}
@@ -52,6 +65,7 @@ namespace Task4
 		/// </summary>
 		public string Description => "CD "+Bandname+Diskname;
 
+		//[JsonIgnore]
 		public myPrice Price => actualprice;
 
 	}
