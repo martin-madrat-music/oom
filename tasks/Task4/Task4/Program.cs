@@ -32,15 +32,14 @@ namespace Task4 {
 			Console.WriteLine(JsonConvert.SerializeObject(disks, settings));
 
 			var json = JsonConvert.SerializeObject(disks, settings);
-			var directory = Environment.GetFolderPath (Environment.SpecialFolder.Desktop);
-			var filename = Path.Combine(directory,"output.json");
+			var filename = Path.Combine("/home/raphael/git_repositories/oom/tasks/Task4","output.json");
 			File.WriteAllText (filename, json);
 
 			var txtFromFile = File.ReadAllText (filename);
 			var disksFromFile = JsonConvert.DeserializeObject<IMusicDisks[]> (txtFromFile, settings);
 			var currency = Currency.USD;
 			foreach (var x in disksFromFile)
-				Console.WriteLine ("{0} {1}{2}",x.Description.PadRight(40), x.Price.convert(currency).Amount,currency);
+				Console.WriteLine ("{0} {1} {2}",x.Description.PadRight(40), x.Price.convert(currency).Amount,currency);
 
 
 

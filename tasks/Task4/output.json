@@ -56,10 +56,6 @@
   },
   {
     "$type": "Task4.Vinyl, Task4",
-    "actualprice": {
-      "Amount": 20.99,
-      "Unit": 0
-    },
     "Bandname": "The Doors ",
     "Diskname": "Doors",
     "Speed": 33,
@@ -72,10 +68,6 @@
   },
   {
     "$type": "Task4.Vinyl, Task4",
-    "actualprice": {
-      "Amount": 21.99,
-      "Unit": 0
-    },
     "Bandname": "David Bowie ",
     "Diskname": "Blackstar",
     "Speed": 45,
@@ -88,10 +80,6 @@
   },
   {
     "$type": "Task4.Vinyl, Task4",
-    "actualprice": {
-      "Amount": 4.55,
-      "Unit": 0
-    },
     "Bandname": "Georg Danzer ",
     "Diskname": "Traurig aber wahr",
     "Speed": 33,

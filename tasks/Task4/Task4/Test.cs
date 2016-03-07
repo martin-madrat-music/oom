@@ -44,7 +44,7 @@ namespace Task4
 
 			try{
 				var x = new Vinyl("","herbert",33,25,23.90m,Currency.EUR);
-				x=x;
+			
 			}
 			catch{
 				Assert.Fail ();
@@ -56,7 +56,7 @@ namespace Task4
 
 			try{
 				var x = new Vinyl("bertram","",33,25,23.90m,Currency.EUR);
-				x=x;
+			
 			}
 			catch{
 				Assert.Fail ();
@@ -68,7 +68,7 @@ namespace Task4
 
 			try{
 				var x = new Vinyl("bertram","herbert",33,25,-23.90m,Currency.EUR);
-				x=x;
+
 			}
 			catch{
 				Assert.Fail ();
