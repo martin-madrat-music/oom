@@ -41,17 +41,39 @@ namespace Task4
 
 		[Test]
 		public void CannotAddEmptyBandname(){
+<<<<<<< HEAD
 			Assert.Catch (() => {
 				var x = new Vinyl ("", "herbert", 33, 25, 23.90m, Currency.EUR);
 					
 			});
+=======
+
+			try{
+				var x = new Vinyl("","herbert",33,25,23.90m,Currency.EUR);
+			
+			}
+			catch{
+				Assert.Fail ();
+			}
+>>>>>>> 110a5b6400367d3c1aaf14168176f78228f202e1
 		}	
 
 		[Test]
 		public void CannotAddEmptyDiskname(){
+<<<<<<< HEAD
 			Assert.Catch (() => {
 				var x = new Vinyl ("bertram", "", 33, 25, 23.90m, Currency.EUR);
 			});
+=======
+
+			try{
+				var x = new Vinyl("bertram","",33,25,23.90m,Currency.EUR);
+			
+			}
+			catch{
+				Assert.Fail ();
+			}
+>>>>>>> 110a5b6400367d3c1aaf14168176f78228f202e1
 		}
 
 		[Test]
@@ -59,7 +81,17 @@ namespace Task4
 			Assert.Catch (() => {
 				var x = new Vinyl ("bertram", "herbert", 33, 25, -23.90m, Currency.EUR);
 
+<<<<<<< HEAD
 			});
+=======
+			try{
+				var x = new Vinyl("bertram","herbert",33,25,-23.90m,Currency.EUR);
+
+			}
+			catch{
+				Assert.Fail ();
+			}
+>>>>>>> 110a5b6400367d3c1aaf14168176f78228f202e1
 		}
 
 	}
