@@ -41,6 +41,6 @@ namespace Task4 {
 			foreach (var x in disksFromFile)
 				Console.WriteLine ("{0} {1} {2}",x.Description.PadRight(40), x.Price.convert(currency).Amount,currency);
 		}
-	
+
 	}
 }
