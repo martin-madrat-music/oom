@@ -1,6 +1,4 @@
-﻿ using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -35,6 +33,7 @@ namespace lesson4
                 Console.WriteLine($"{x.Description.Truncate(50),-50} {x.Price.ConvertTo(currency).Amount,8:0.00} {currency}");
             }
 
+
             SerializationExample(items);
         }
 
@@ -64,6 +63,8 @@ namespace lesson4
             var currency = Currency.EUR;
             foreach (var x in itemsFromFile) 
 				Console.WriteLine($"{x.Description.Truncate(50),-50} {x.Price.ConvertTo(currency).Amount,8:0.00} {currency}");
+            SerializationExample.Run(items);
+
         }
     }
 }
