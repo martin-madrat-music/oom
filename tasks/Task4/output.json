@@ -1,6 +1,6 @@
 [
   {
-    "$type": "Task4.CompactDisk, Task6",
+    "$type": "Task6.CompactDisk, Task6",
     "Bandname": "Slayer ",
     "Diskname": "Repentless",
     "ASIN": "B00ZU6IVXW",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "$type": "Task4.CompactDisk, Task6",
+    "$type": "Task6.CompactDisk, Task6",
     "Bandname": "Night Falls Last ",
     "Diskname": "Deathwalker",
     "ASIN": "B00NDJF398",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "$type": "Task4.CompactDisk, Task6",
+    "$type": "Task6.CompactDisk, Task6",
     "Bandname": "Obscura ",
     "Diskname": "Acróasis",
     "ASIN": "B018A1MUEO",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "$type": "Task4.CompactDisk, Task6",
+    "$type": "Task6.CompactDisk, Task6",
     "Bandname": "Comeback Kid ",
     "Diskname": "Die Knowing",
     "ASIN": "B00HQ5XK04",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "$type": "Task4.CompactDisk, Task6",
+    "$type": "Task6.CompactDisk, Task6",
     "Bandname": "Architects ",
     "Diskname": "Lost Forever/Lost Together",
     "ASIN": "B00HUGK7N2",
@@ -55,7 +55,7 @@
     }
   },
   {
-    "$type": "Task4.Vinyl, Task6",
+    "$type": "Task6.Vinyl, Task6",
     "Bandname": "The Doors ",
     "Diskname": "Doors",
     "Speed": 33,
@@ -67,7 +67,7 @@
     }
   },
   {
-    "$type": "Task4.Vinyl, Task6",
+    "$type": "Task6.Vinyl, Task6",
     "Bandname": "David Bowie ",
     "Diskname": "Blackstar",
     "Speed": 45,
@@ -79,7 +79,7 @@
     }
   },
   {
-    "$type": "Task4.Vinyl, Task6",
+    "$type": "Task6.Vinyl, Task6",
     "Bandname": "Georg Danzer ",
     "Diskname": "Traurig aber wahr",
     "Speed": 33,

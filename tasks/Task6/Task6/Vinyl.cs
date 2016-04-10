@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Net;
 using Newtonsoft.Json;
 
-namespace Task4
+namespace Task6
 {
 	public class Vinyl : IMusicDisks
 	{

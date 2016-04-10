@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Task4
+namespace Task6
 {
 	[TestFixture]
 	public class Test

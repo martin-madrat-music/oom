@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Task4
+namespace Task6
 {
 	public interface IMusicDisks
 	{

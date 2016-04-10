@@ -24,33 +24,33 @@ namespace lesson6
             {
                 var task = Task.Run(() =>
                 {
-                    WriteLine($"computing result for {x}");
+                    Console.WriteLine($"computing result for {x}");
                     Task.Delay(TimeSpan.FromSeconds(5.0 + random.Next(10))).Wait();
-                    WriteLine($"done computing result for {x}");
+						Console.WriteLine($"done computing result for {x}");
                     return x * x;
                 });
 
                 tasks.Add(task);
             }
             
-            WriteLine("doing something else ...");
+			Console.WriteLine("doing something else ...");
 
             var tasks2 = new List<Task<int>>();
             foreach (var task in tasks.ToArray())
             {
                 tasks2.Add(
-                    task.ContinueWith(t => { WriteLine($"result is {t.Result}"); return t.Result; })
+					task.ContinueWith(t => { Console.WriteLine($"result is {t.Result}"); return t.Result; })
                 );
             }
 
             var cts = new CancellationTokenSource();
             var primeTask = ComputePrimes(cts.Token);
 
-            ReadLine();
+			Console.ReadLine();
             cts.Cancel();
-            WriteLine("canceled ComputePrimes");
+			Console.WriteLine("canceled ComputePrimes");
 
-            ReadLine();
+			Console.ReadLine();
         }
 
         public static Task<bool> IsPrime(int x, CancellationToken ct)
@@ -71,7 +71,7 @@ namespace lesson6
             for (var i = 100000000; i < int.MaxValue; i++)
             {
                 ct.ThrowIfCancellationRequested();
-                if (await IsPrime(i, ct)) WriteLine($"prime number: {i}");
+				if (await IsPrime(i, ct)) Console.WriteLine($"prime number: {i}");
             }
         }
     }

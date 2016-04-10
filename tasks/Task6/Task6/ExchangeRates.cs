@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Net;
 
-namespace Task4
+namespace Task6
 {
 	public static class ExchangeRates
 	{

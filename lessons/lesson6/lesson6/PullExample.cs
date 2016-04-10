@@ -11,25 +11,25 @@ namespace lesson6
     {
         public static void Run()
         {
-            WriteLine("enumerables: foreach (array)");
+			Console.WriteLine("enumerables: foreach (array)");
             IEnumerable<int> xs = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
-            foreach (var x in xs) Write(x + " "); WriteLine();
+			foreach (var x in xs) Console.Write(x + " "); Console.WriteLine();
 
-            WriteLine("enumerables: foreach (list)");
+			Console.WriteLine("enumerables: foreach (list)");
             xs = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
-            foreach (var x in xs) Write(x + " "); WriteLine();
+			foreach (var x in xs) Console.Write(x + " "); Console.WriteLine();
             
-            WriteLine("enumerables: behind the scenes");
+			Console.WriteLine("enumerables: behind the scenes");
             var e = xs.GetEnumerator();
-            while (e.MoveNext()) Write(e.Current + " "); WriteLine();
+			while (e.MoveNext()) Console.Write(e.Current + " "); Console.WriteLine();
 
-            WriteLine("enumerables: queries (filter) - Where(x => x % 2 == 0)");
+			Console.WriteLine("enumerables: queries (filter) - Where(x => x % 2 == 0)");
             var ys = xs.Where(x => x % 2 == 0);
-            foreach (var y in ys) Write(y + " "); WriteLine();
+			foreach (var y in ys) Console.Write(y + " "); Console.WriteLine();
 
-            WriteLine("enumerables: queries (map) - Select(x => x * x)");
+			Console.WriteLine("enumerables: queries (map) - Select(x => x * x)");
             ys = xs.Select(x => x * x);
-            foreach (var y in ys) Write(y + " "); WriteLine();
+			foreach (var y in ys) Console.Write(y + " "); Console.WriteLine();
         }
     }
 }

@@ -72,6 +72,7 @@
     <Compile Include="myPrice.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Vinyl.cs" />
+    <Compile Include="dontKnowHowToPull.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
