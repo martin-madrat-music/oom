@@ -22,7 +22,8 @@ namespace Task6
 			var vinylsource = new Subject<Vinyl> ();
 
 
-			var diskThread = new Thread(() => {
+			var diskThread = new Thread(() =>
+            {
 				int j=0;
 				var vinyls=new Vinyl[] {
 						new Vinyl("Queen","Queen",33,25,13.99m,Currency.EUR),
@@ -41,16 +42,17 @@ namespace Task6
 						new Vinyl("Queen","Made in Heaven",33,25,13.99m,Currency.EUR),
 						new Vinyl("Queen","The Cosmos Rocks",33,25,13.99m,Currency.EUR)
 				};
-				while(j<vinyls.Length){
+
+                vinylsource
+                         .Where(x => x.Diskname.Length > 10)
+                         .Subscribe(x => Console.WriteLine(x.Diskname));
+                
+                while (j<vinyls.Length){
 					
 					Thread.Sleep(500);
 					vinylsource.OnNext(vinyls[j]);
-					
-					vinylsource
-						.Where(x => x.Diskname.Length>10)
-						.Subscribe(x => Console.WriteLine(x.Diskname));
-					j++;
-				}
+                    j++;
+                }
 			});
 			diskThread.Start ();
 

@@ -31,7 +31,7 @@ namespace Task6 {
 			foreach (var x in vinyls)
 				Console.WriteLine(x + " ");
 			*/
-			SerializeDisks (disks);
+			//SerializeDisks (disks);
 			myPull.doStuff();
 			//myTask.doStuff ();
 		}
@@ -57,21 +57,21 @@ namespace Task6 {
 			
 		}
 	
-		private static decimal CalculateExchangeRate (Currency givenCurrency, Currency exchangeableCurrency){
-			Task.Run(async() =>
-				{
-					var key = string.Format ("{0}{1}",givenCurrency,exchangeableCurrency);
-					//var url = string.Format (@"http://download.finance.yahoo.com/d/quotes.csv?s={0}=X&f=sl1d1t1c1ohgv&e=.csv", key);
-					Uri uri = new System.Uri("http://download.finance.yahoo.com/d/quotes.csv?s={0}=X&f=sl1d1t1c1ohgv&e=.csv");
-					/*Cannot await 'void' expression*/
-					string csv = await new WebClient().DownloadStringAsync(uri);
-					var splittedstring = csv.Split (',');
-					var rate = decimal.Parse(splittedstring [1], CultureInfo.InvariantCulture);
-					return rate;
-				});
+		//private static decimal CalculateExchangeRate (Currency givenCurrency, Currency exchangeableCurrency){
+		//	Task.Run(async() =>
+		//		{
+		//			var key = string.Format ("{0}{1}",givenCurrency,exchangeableCurrency);
+		//			//var url = string.Format (@"http://download.finance.yahoo.com/d/quotes.csv?s={0}=X&f=sl1d1t1c1ohgv&e=.csv", key);
+		//			Uri uri = new System.Uri("http://download.finance.yahoo.com/d/quotes.csv?s={0}=X&f=sl1d1t1c1ohgv&e=.csv");
+		//			/*Cannot await 'void' expression*/
+		//			string csv = await new WebClient().DownloadStringAsync(uri);
+		//			var splittedstring = csv.Split (',');
+		//			var rate = decimal.Parse(splittedstring [1], CultureInfo.InvariantCulture);
+		//			return rate;
+		//		});
 			
 
-		}
+		//}
 		
 	}
 }
